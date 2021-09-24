@@ -14,18 +14,6 @@ class App extends Component{
         showPersons: false
     }
 
-    switchNameHandler = (newName) => {
-        //console.log('Was clicked');
-        // DONT DO THIS: this.state.persons[0].name = 'Maximilian';
-        this.setState({
-            persons: [
-                {name: newName, age: 40},
-                {name: 'Simona', age: 35},
-                {name: 'Filip', age: 33}
-            ]
-        });
-    }
-
     nameChangedHandler = (event) => {
         this.setState({
             persons: [
@@ -34,6 +22,12 @@ class App extends Component{
                 {name: 'Filip', age: 33}
             ]
         });
+    }
+
+    deletePersonsHandler = (personIndex) => {
+        const persons = [...this.state.persons];
+        persons.splice(personIndex, 1);
+        this.setState({persons: persons});
     }
 
     togglePersonsHandler = () => {
@@ -55,17 +49,14 @@ class App extends Component{
         if (this.state.showPersons) {
             persons = (
                 <div>
-                    <Person
-                        name={this.state.persons[0].name}
-                        age={this.state.persons[0].age}
-                        changed ={this.nameChangedHandler}/>
-                    <Person
-                        name={this.state.persons[1].name}
-                        age={this.state.persons[1].age}
-                        click={this.switchNameHandler.bind(this, 'Maximilian!!')}> My Hobbies are LOL</Person>
-                    <Person
-                        name={this.state.persons[2].name}
-                        age={this.state.persons[2].age}/>
+                    {
+                        this.state.persons.map((person, index) => {
+                            return <Person
+                                click={() => this.deletePersonsHandler(index)}
+                                name={person.name}
+                                age={person.age}/>
+                        })
+                    }
                 </div>
             );
         }

@@ -71,5 +71,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
+## Click on the 'Switch Name' button:
+### 1. You can change the names by typing new name in the text box
+### 2. You can delete person by clicking on the box.
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
 
 ![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)

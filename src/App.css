@@ -46,3 +46,11 @@
   width: 200px;
   padding: 20px;
 }
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}

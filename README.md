@@ -74,6 +74,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ## Click on the 'Switch Name' button:
 ### 1. You can change the names by typing new name in the text box
 ### 2. You can delete person by clicking on the box.
+### 3. Install new package 'radium' which allows us to use inline styles with pseudo selectors and media queries
+npm install --save radium
 
 ![img.png](img.png)
 

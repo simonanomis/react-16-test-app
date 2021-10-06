@@ -1,10 +1,15 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import cssClasses from './App.css';
 import Persons from '../components/Persons/Persons'
 import Cockpit from '../components/Cockpit/Cockpit'
 
 
-class App extends Component{
+class App extends PureComponent {
+    constructor(props) {
+        super(props);
+        console.log('[App.js]');
+    }
+
     state = {
         persons: [
             {id: "abc123", name: 'Max', age: 28},

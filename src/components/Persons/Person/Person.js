@@ -3,6 +3,7 @@ import classes from './Person.css'
 import WithClass from "../../../hoc/WithClass";
 import Auxiliary from "../../../hoc/Auxiliary";
 import anotherWithClass from "../../../hoc/anotherWithClass";
+import PropTypes from "prop-types";
 
 class Person extends Component {
     constructor( props ) {
@@ -33,6 +34,13 @@ class Person extends Component {
         //     <input key="3" type="text" onChange={this.props.changed} value={this.props.name} />
         // ]
     }
+}
+
+Person.propTypes = {
+    click: PropTypes.func,
+    name: PropTypes.string,
+    age: PropTypes.number,
+    changed: PropTypes.func
 }
 
 export default anotherWithClass(Person, classes.Person);
